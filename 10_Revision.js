@@ -286,7 +286,6 @@ Space = O(n)
 // This repeated work causes
 // exponential time complexity.
 
-
 // ==========================================================
 // Common Recursion Interview Questions
 // ==========================================================
@@ -295,182 +294,268 @@ Space = O(n)
 
 Q1. What is Recursion?
 
+Answer:
+Recursion is a programming technique in which
+a function calls itself to solve a smaller
+version of the same problem.
+
+
 --------------------------------------------------
+
 
 Q2. What is a Base Case?
 
+Answer:
+A Base Case is the stopping condition of a
+recursive function. It prevents infinite recursion.
+
+
 --------------------------------------------------
+
 
 Q3. What happens if there is no Base Case?
 
+Answer:
+The function keeps calling itself forever
+until the Call Stack is full, causing a
+Stack Overflow error.
+
+
 --------------------------------------------------
+
 
 Q4. What is the Call Stack?
 
+Answer:
+The Call Stack is a memory structure that
+stores all active function calls.
+
+Functions are removed from the stack
+after they finish execution.
+
+
 --------------------------------------------------
+
 
 Q5. Difference between Iteration and Recursion?
 
+Answer:
+
+Iteration
+✔ Uses loops
+✔ Less memory
+✔ Faster
+✔ Space Complexity = O(1)
+
+Recursion
+✔ Uses function calls
+✔ More readable for recursive problems
+✔ Uses Call Stack
+✔ Space Complexity = O(n)
+
+
 --------------------------------------------------
 
-Q6. Which is better?
-Iteration or Recursion?
+
+Q6. Which is better: Iteration or Recursion?
+
+Answer:
+It depends on the problem.
+
+Iteration is generally faster and uses less memory.
+
+Recursion is better for naturally recursive
+problems like Trees, Graphs, Divide & Conquer,
+and Backtracking.
+
 
 --------------------------------------------------
+
 
 Q7. Why is Recursive Fibonacci slow?
 
+Answer:
+Because it solves the same subproblems
+multiple times.
+
+Example:
+fib(3) is calculated repeatedly.
+
+This repeated work makes it inefficient.
+
+
 --------------------------------------------------
+
 
 Q8. Time Complexity of Recursive Fibonacci?
 
+Answer:
+
+O(2ⁿ)
+
+Because every function call creates
+two more recursive calls.
+
+
 --------------------------------------------------
+
 
 Q9. Space Complexity of Recursive Fibonacci?
 
+Answer:
+
+O(n)
+
+Because recursive calls are stored
+in the Call Stack.
+
+
 --------------------------------------------------
 
-Q10. Why does recursion use more memory?
+
+Q10. Why does Recursion use more memory?
+
+Answer:
+Each recursive function call is stored
+in the Call Stack until it returns.
+
+More function calls require more memory.
+
 
 --------------------------------------------------
+
 
 Q11. What is Stack Overflow?
 
---------------------------------------------------
+Answer:
+Stack Overflow occurs when the Call Stack
+becomes full due to too many recursive
+function calls, usually because the Base Case
+is missing or never reached.
 
-Q12. Explain recursion using factorial.
-
---------------------------------------------------
-
-Q13. Explain recursion using Fibonacci.
-
---------------------------------------------------
-
-Q14. What are overlapping subproblems?
 
 --------------------------------------------------
+
+
+Q12. Explain Recursion using Factorial.
+
+Answer:
+
+factorial(5)
+
+↓
+
+5 × factorial(4)
+
+↓
+
+5 × 4 × factorial(3)
+
+↓
+
+5 × 4 × 3 × factorial(2)
+
+↓
+
+5 × 4 × 3 × 2 × factorial(1)
+
+↓
+
+5 × 4 × 3 × 2 × 1 × factorial(0)
+
+↓
+
+Base Case
+
+factorial(0) = 1
+
+↓
+
+Returns
+
+120
+
+
+--------------------------------------------------
+
+
+Q13. Explain Recursion using Fibonacci.
+
+Answer:
+
+fib(5)
+
+↓
+
+fib(4) + fib(3)
+
+↓
+
+fib(3)+fib(2)
++
+fib(2)+fib(1)
+
+↓
+
+Continue until
+
+fib(1)
+
+fib(0)
+
+Then return upward.
+
+Final Answer = 5
+
+
+--------------------------------------------------
+
+
+Q14. What are Overlapping Subproblems?
+
+Answer:
+Overlapping subproblems occur when the same
+problem is solved multiple times.
+
+Example:
+
+fib(5)
+
+calculates
+
+fib(3)
+
+more than once.
+
+Dynamic Programming avoids this repetition.
+
+
+--------------------------------------------------
+
 
 Q15. How can Fibonacci be optimized?
 
 Answer:
-Memoization
-Dynamic Programming
+
+✔ Memoization
+
+Store previously computed values
+to avoid repeated calculations.
+
+Time Complexity = O(n)
+
+Space Complexity = O(n)
+
+
+✔ Dynamic Programming (Tabulation)
+
+Build the solution from smaller
+subproblems iteratively.
+
+Time Complexity = O(n)
+
+Space Complexity = O(n)
+
+Space can even be optimized to O(1).
 
 */
-
-
-
-
-// ==========================================================
-// Today's Practice Tasks
-// ==========================================================
-
-/*
-
-Task 1
-
-Write Count Digits
-without looking at notes.
-
-✔
-
-
-Task 2
-
-Write Reverse Number.
-
-✔
-
-
-Task 3
-
-Write Palindrome Number.
-
-✔
-
-
-Task 4
-
-Write Armstrong Number.
-
-✔
-
-
-Task 5
-
-Write GCD using Euclidean Algorithm.
-
-✔
-
-
-Task 6
-
-Write LCM.
-
-✔
-
-
-Task 7
-
-Write Factorial
-
-(a) Iterative
-
-(b) Recursive
-
-✔
-
-
-Task 8
-
-Write Recursive Fibonacci.
-
-✔
-
-
-Task 9
-
-Dry Run
-
-factorial(5)
-
-✔
-
-
-Task 10
-
-Draw Fibonacci Recursion Tree
-
-fib(5)
-
-✔
-
-
-Task 11
-
-Revise all Time & Space Complexities.
-
-✔
-
-
-Task 12
-
-Answer all Interview Questions
-without looking at notes.
-
-✔
-
-*/
-
-
-
-
-// ==========================================================
-// Goal of Today
-// ==========================================================
-
-// ✔ Revise all Phase 1 concepts.
-// ✔ Solve every problem without notes.
-// ✔ Explain logic confidently.
-// ✔ Remember Time & Space Complexity.
-// ✔ Be able to answer interview questions.
