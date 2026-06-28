@@ -492,3 +492,8 @@ console.log("Transaction ID:", transactionID);
 let verificationCode = 4521;
 
 console.log("Your Verification Code is:", verificationCode);
+
+// Remember that
+// last digit = num % 10;
+// reverse = reverse * 10 + last digit
+// num = num/10
