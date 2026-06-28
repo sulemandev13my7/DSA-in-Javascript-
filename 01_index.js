@@ -18,7 +18,6 @@
 // Data = 10, 20, 30
 // Data Structure = [10, 20, 30] (organized data)
 // Algorithm = Steps to search, sort, insert, or delete data.
-
 // ==========================================================
 // Why is DSA Important?
 // ==========================================================

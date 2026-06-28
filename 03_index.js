@@ -347,3 +347,14 @@ If current element is smaller,
 update min.
 
 */
+
+// Last mein 
+let ar = [1,23,4,5,46,44,43];
+let maxx = ar[0];
+
+for(let i = 1; i < ar.length; i++){
+    if(ar[i] > maxx){
+        maxx = ar[i]
+    };
+};
+console.log(maxx);
